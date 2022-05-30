@@ -1,0 +1,15 @@
+// * media request
+@mixin media ($_property, $_value) {
+    @media ($_property: $_value) {
+        @content
+    }
+}
+
+;
+
+// font size
+@mixin font-style ($_font-color, $_line-height, $_font-size: 1rem) {
+    color: $_font-color;
+    line-height: $_line-height;
+    font-size: $_font-size;
+}

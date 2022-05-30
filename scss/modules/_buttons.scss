@@ -1,0 +1,20 @@
+.button {
+    display: inline-block;
+    max-width: 172px;
+    height: 40px;
+    padding: 10px 25px;
+
+    background-color: $graphite-color;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__link {
+        text-decoration: none;
+        @include font-style($white-color, 18px, 1rem);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}

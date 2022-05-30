@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    box-shadow: 0px 2px 4px rgba($color: $black-color, $alpha: 0.2);
+    width: 100%;
+
+    // &__container {
+    //     padding: 25px 32px;}
+
+    @include media (min-width, 1000px) {
+        &__container {
+            padding: 25px 32px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .menu__list {
+        display: flex;
+
+        .menu__link {
+            @include font-style ($mid-grey, 24px, 1rem)
+        }
+
+        .menu__link {
+            margin-right: 32px;
+        }
+
+        .menu__link:last-child {
+            margin-right: 26px;
+        }
+    }
+
+}
