@@ -1,3 +1,4 @@
+// * header
 .header {
     position: fixed;
     box-shadow: 0px 2px 4px rgba($color: $black-color, $alpha: 0.2);
@@ -6,71 +7,77 @@
     &__container {
         padding: 25px 32px;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row nowrap;
     }
 
+    &__menu-icon {
+        display: none;
+    }
+
+    // * menu 
     .menu {
         display: flex;
-    }
+        align-items: center;
+        justify-content: center;
 
-    .menu__list {
-        display: flex;
+        &__list {
+            display: flex;
+        }
 
-        .menu__link {
-            @include font-style ($mid-grey, 24px, 1rem);
+        &__link {
+            @include font-style ($mid-grey, 1.714rem, 1rem);
             margin-right: 32px;
             position: relative;
+
+            &:last-child {
+                margin-right: 26px;
+            }
         }
 
-        .menu__link:last-child {
-            margin-right: 26px;
+        // ! desktop menu 
+        @include media (min-width, 1000px) {
+
+            &__link::after,
+            &__link_active::after {
+                content: '';
+
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+
+                width: 100%;
+                height: 2px;
+
+                background-color: $graphite-color;
+                border-radius: 4px;
+                visibility: hidden;
+            }
+
+            &__link::after {
+                transition: visibility .1s translateY .1s;
+            }
+
+            &__link:hover::after {
+                transform: translateY(2px);
+                visibility: visible;
+                transition: all .2s;
+            }
+
+            .menu__link_active {
+                pointer-events: none;
+
+                &::after {
+                    transform: translateY(2px);
+                    visibility: visible;
+                }
+            }
         }
     }
 
-    @include media (min-width, 1000px) {
-        &__container {
-            align-items: center;
-            justify-content: space-between;
-            flex-flow: row nowrap;
-        }
-
-        .header__menu-icon {
-            display: none;
-        }
-
-        .menu {
-            align-items: center;
-            justify-content: center;
-        }
-
-        .menu__link_active::after {
-            content: '';
-
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-
-            width: 100%;
-            height: 2px;
-
-            border-radius: 4px;
-            background-color: $graphite-color;
-
-            // transform: translateY(8px);
-            // // transition: background-color .2s, transform .2s;
-            // transition: all 0.2s ease;
-        }
-    }
-
+    // ! mobile menu
     @include media (max-width, 1000px) {
-        &__container {
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .menu {
-            display: none;
-        }
-
         .header__menu-icon {
             z-index: 5;
             display: block;
@@ -78,50 +85,121 @@
             width: 30px;
             height: 18px;
             cursor: pointer;
+
+            & span,
+            &::before,
+            &::after {
+                left: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+
+                transition: all 0.3s ease 0s;
+                background-color: $black-color;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            & span {
+                top: 50%;
+                transform: scale(1) translate(0px, -50%);
+            }
+
+            // * header menu icon active condition
+            &_active span,
+            &_active::before,
+            &_active::after {
+                background-color: $white-color;
+            }
+
+            &_active span {
+                transform: scale(0) translate(0px, -50px);
+            }
+
+            &_active::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+
+            &_active::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0px, 50%);
+            }
         }
 
-        .header__menu-icon span,
-        .header__menu-icon::before,
-        .header__menu-icon::after {
-            left: 0;
-            position: absolute;
-            height: 10%;
+        // * menu
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            position: fixed;
+            padding: 15% 20px 0 20px;
+
             width: 100%;
-
-            transition: all 0.3s ease 0s;
-            background-color: $black-color;
-        }
-
-        .header__menu-icon::before,
-        .header__menu-icon::after {
-            content: "";
-        }
-
-        .header__menu-icon::before {
+            height: 100%;
+            left: -100%;
             top: 0;
-        }
 
-        .header__menu-icon::after {
-            bottom: 0;
-        }
+            background-color: rgba(0, 0, 0, 0.9);
+            transition: left 0.3s ease 0s;
 
-        .header__menu-icon span {
-            top: 50%;
-            transform: scale(1) translate(0px, -50%);
-        }
 
-        .header__menu-icon_active span {
-            transform: scale(0) translate(0px, -50px);
-        }
+            &_active {
+                left: 0;
+                z-index: 4;
+                transition: left 0.3s ease 0s;
+            }
 
-        .header__menu-icon_active::before {
-            top: 50%;
-            transform: rotate(-45deg) translate(0px, -50%);
-        }
+            &__body {
+                margin-bottom: 15px;
+            }
 
-        .header__menu-icon_active::after {
-            bottom: 50%;
-            transform: rotate(45deg) translate(0px, 50%);
+            &__list {
+                flex-direction: column;
+                padding: 0;
+
+                & li {
+                    margin: 10px;
+                }
+            }
+
+            &__link,
+            &__link:last-child {
+                margin: 0;
+
+                @include font-style ($white-color, 1.714rem, 1.429rem)
+            }
+        }
+    }
+
+    // ! breakpoint: 768px
+    @include media (max-width, 768px) {
+        .menu {
+            padding: 30% 20px 0 20px;
+        }
+    }
+
+    // ! media query for landscape orientation
+    @media (max-width: 768px) and (orientation: landscape) {
+        .menu {
+            padding-top: 15%;
+
+            &__body {
+                overflow-y: auto;
+            }
         }
     }
 
