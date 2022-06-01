@@ -7,7 +7,7 @@
 
 ;
 
-// font size
+// * font size
 @mixin font-style ($_font-color, $_line-height, $_font-size: 1rem) {
     color: $_font-color;
     line-height: $_line-height;
