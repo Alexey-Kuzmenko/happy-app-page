@@ -5,7 +5,7 @@
 @import 'base/reset';
 @import 'modules/root';
 
-/* ! page */
+/* ! page and container */
 @import 'modules/page';
 @import 'modules/container';
 
@@ -14,3 +14,7 @@
 
 /* * button */
 @import 'modules/buttons';
+
+/* * main and content block */
+@import 'modules/main';
+@import 'modules/content-block';
