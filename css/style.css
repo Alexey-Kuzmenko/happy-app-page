@@ -343,7 +343,7 @@ body {
   background-color: #222222;
 }
 
-.main__container, .main__container_dark {
+.main__container {
   padding: 100px 16px 0 16px;
 }
 
@@ -353,20 +353,6 @@ body {
 
 .main__content-block .content-block__logo {
   margin-bottom: 11px;
-}
-
-.main__content-block .content-block__title {
-  color: #222222;
-  line-height: 4.214rem;
-  font-size: 3.857rem;
-  margin-bottom: 18px;
-}
-
-.main__content-block .content-block__text {
-  color: #222222;
-  line-height: 1.714rem;
-  font-size: 1.143rem;
-  margin-bottom: 18px;
 }
 
 .main__content-block .content-block__buttons {
@@ -405,7 +391,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 25px 10px;
+    padding: 25px 10px 0px 10px;
   }
   .main .content-block__title {
     font-size: 2.857rem;
@@ -442,6 +428,20 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.content-block__title {
+  color: #222222;
+  line-height: 4.214rem;
+  font-size: 3.857rem;
+  margin-bottom: 18px;
+}
+
+.content-block__text {
+  color: #222222;
+  line-height: 1.714rem;
+  font-size: 1.143rem;
+  margin-bottom: 18px;
 }
 
 .features-block__content {
@@ -623,9 +623,18 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .features-block__title {
+    text-align: center;
+  }
+}
+
 @media (width: 320px) {
   .features-block__card img {
     left: calc(50% - 272px/2);
+  }
+  .features-block__card-rectangle {
+    padding: 35px 47px;
   }
 }
 /*# sourceMappingURL=style.css.map */

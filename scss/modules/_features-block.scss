@@ -111,8 +111,6 @@
         align-items: center;
         justify-content: center;
 
-        // background-color: $blue-color;
-
         & img {
             max-width: 24px;
             max-height: 27px;
@@ -158,10 +156,21 @@
         }
     }
 
+    @include media (max-width, 768px) {
+        &__title {
+            text-align: center;
+        }
+    }
+
     @include media (width, 320px) {
         &__card img {
             left: calc(50% - 272px/2);
         }
+
+        &__card-rectangle {
+            padding: 35px 47px;
+        }
+
     }
 
 }

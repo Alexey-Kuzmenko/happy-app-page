@@ -4,4 +4,14 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: flex-start;
+
+    &__title {
+        @include font-style ($graphite-color, 4.214rem, 3.857rem);
+        margin-bottom: 18px;
+    }
+
+    &__text {
+        @include font-style ($graphite-color, 1.714rem, 1.143rem);
+        margin-bottom: 18px;
+    }
 }

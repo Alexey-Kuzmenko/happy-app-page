@@ -4,8 +4,7 @@
         background-color: $graphite-color;
     }
 
-    &__container,
-    &__container_dark {
+    &__container {
         padding: 100px 16px 0 16px;
     }
 
@@ -17,16 +16,6 @@
 
         .content-block__logo {
             margin-bottom: 11px;
-        }
-
-        .content-block__title {
-            @include font-style ($graphite-color, 4.214rem, 3.857rem);
-            margin-bottom: 18px;
-        }
-
-        .content-block__text {
-            @include font-style ($graphite-color, 1.714rem, 1.143rem);
-            margin-bottom: 18px;
         }
 
         .content-block__buttons {
@@ -52,7 +41,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 25px 10px;
+            padding: 25px 10px 0px 10px;
         }
 
         .content-block__title {
