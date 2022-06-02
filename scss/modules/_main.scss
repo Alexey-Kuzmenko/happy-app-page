@@ -1,7 +1,12 @@
 .main {
 
-    &__container {
-        padding: 100px 16px;
+    &__color-wrapper {
+        background-color: $graphite-color;
+    }
+
+    &__container,
+    &__container_dark {
+        padding: 100px 16px 0 16px;
     }
 
     &__container_dark {
@@ -34,7 +39,7 @@
     }
 
     .inner-felx-container {
-        padding: 45px 78px;
+        padding: 45px 78px 0 78px;
 
         display: flex;
         flex-flow: row wrap;

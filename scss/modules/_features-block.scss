@@ -1,0 +1,167 @@
+.features-block {
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        margin-bottom: 45px
+    }
+
+    &__sub-title {
+        @include font-style ($white-color, 1.429rem, 1rem);
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include font-style ($white-color, 2.571rem, 2.286rem)
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    &__card {
+        width: 379px;
+        height: 490px;
+        margin-bottom: 16px;
+        position: relative;
+        z-index: 1;
+
+
+        background-color: $white-color;
+        border-radius: 20px;
+
+        &>img {
+            position: absolute;
+            width: auto;
+            height: 450px;
+            left: calc(50% - 308.75px/2);
+            top: calc(50% - 450px/2);
+            z-index: 2;
+        }
+    }
+
+    &__card-rectangle {
+        max-width: 379px;
+        height: 197px;
+        padding: 48px 47px;
+
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        bottom: 0;
+        z-index: 3;
+
+        background: #F2F2F2;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    &__card-title {
+        margin-bottom: 11px;
+        @include font-style (#000, 2.143rem, 1.714rem);
+        text-align: center;
+
+        &_blue {
+            color: $blue-color
+        }
+
+        &_red {
+            color: $red-color
+        }
+
+        &_orange {
+            color: $orange-color
+        }
+
+        &_pink {
+            color: $pink-color
+        }
+
+        &_light-blue {
+            color: $light-blue
+        }
+
+        &_purple {
+            color: $purple-color
+        }
+    }
+
+    &__card-text {
+        @include font-style ($graphite-color, 1.571rem, 1.071rem);
+        text-align: center
+    }
+
+    &__card-square {
+        width: 64px;
+        height: 64px;
+        padding: 19px 20px;
+        position: absolute;
+        left: calc(50% - 64px/2);
+        top: 259px;
+        z-index: 4;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // background-color: $blue-color;
+
+        & img {
+            max-width: 24px;
+            max-height: 27px;
+        }
+
+        &_blue {
+            background-color: $blue-color;
+        }
+
+        &_red {
+            background-color: $red-color
+        }
+
+        &_orange {
+            background-color: $orange-color
+        }
+
+        &_pink {
+            background-color: $pink-color
+        }
+
+        &_light-blue {
+            background-color: $light-blue
+        }
+
+        &_purple {
+            background-color: $purple-color
+        }
+    }
+
+
+
+
+    // ! media query
+    @include media (max-width, 1440px) {
+
+        &__cards {
+            justify-content: center;
+        }
+
+        &__card {
+            margin: 16px 8px;
+        }
+    }
+
+    @include media (width, 320px) {
+        &__card img {
+            left: calc(50% - 272px/2);
+        }
+    }
+
+}
