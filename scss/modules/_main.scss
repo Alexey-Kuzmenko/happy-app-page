@@ -1,7 +1,15 @@
 .main {
 
-    &__color-wrapper {
+    &__color-wrapper_dark {
         background-color: $graphite-color;
+    }
+
+    &__color-wrapper_red {
+        background-color: $red-color;
+    }
+
+    &__color-wrapper_dark-white {
+        background-color: $dark-white;
     }
 
     &__container {
@@ -10,6 +18,11 @@
 
     &__container_dark {
         background-color: $graphite-color;
+    }
+
+    &__container_red {
+        background-color: $red-color;
+        padding: 80px 0 80px 0;
     }
 
     &__content-block {
@@ -33,6 +46,10 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+
+        &_reverse {
+            flex-flow: row-reverse wrap;
+        }
     }
 
     @include media (max-width, 1000px) {

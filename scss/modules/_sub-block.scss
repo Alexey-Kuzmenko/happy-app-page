@@ -1,0 +1,38 @@
+.sub-block {
+    padding: 0 47px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__number {
+        @include font-style ($white-color, 6.857rem, 6.857rem);
+        text-align: center;
+    }
+
+    &__caption {
+        @include font-style ($white-color, 1.429rem);
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase
+    }
+
+    @include media (max-width, 768px) {
+        & {
+            flex-direction: column;
+        }
+
+        &__content {
+            &:nth-child(2) {
+                margin: 16px 0;
+            }
+        }
+    }
+}

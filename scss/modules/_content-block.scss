@@ -1,5 +1,5 @@
 .content-block {
-    // max-width: 420px;
+    max-width: 420px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -13,5 +13,21 @@
     &__text {
         @include font-style ($graphite-color, 1.714rem, 1.143rem);
         margin-bottom: 18px;
+    }
+
+    &__caption {
+        margin-bottom: 5px;
+        @include font-style ($graphite-color, 1.429rem);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    &__title_small {
+        @include font-style ($graphite-color, 2.571rem, 2.286rem);
+    }
+
+    &__text_grey {
+        @include font-style ($grey-color, 1.714rem, 1.143rem);
+        max-width: 403px;
     }
 }
