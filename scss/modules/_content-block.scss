@@ -30,4 +30,40 @@
         @include font-style ($grey-color, 1.714rem, 1.143rem);
         max-width: 403px;
     }
+
+    @include media (max-width, 1000px) {
+        &__title {
+            font-size: 2.857rem;
+            text-align: center;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &__image {
+            margin-top: 20px;
+        }
+    }
+
+    @include media (max-width, 768px) {
+        &__caption {
+            margin-bottom: 15px;
+        }
+
+        &__title_small {
+            font-size: 1.786rem;
+        }
+    }
+
+    @include media (max-width, 375px) {
+        &__title {
+            font-size: 2.143rem;
+        }
+
+        &__title_small {
+            font-size: 1.786rem;
+        }
+    }
+
 }

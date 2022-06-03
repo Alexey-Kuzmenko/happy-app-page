@@ -10,6 +10,7 @@
     }
 
     &__sub-title {
+        margin-bottom: 5px;
         @include font-style ($white-color, 1.429rem, 1rem);
         text-transform: uppercase;
     }
@@ -157,6 +158,10 @@
     }
 
     @include media (max-width, 768px) {
+        &__sub-title {
+            margin-bottom: 15px;
+        }
+
         &__title {
             text-align: center;
         }

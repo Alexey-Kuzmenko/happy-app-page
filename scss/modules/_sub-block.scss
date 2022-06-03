@@ -35,4 +35,10 @@
             }
         }
     }
+
+    @include media (max-width, 375px) {
+        &__number {
+            font-size: 5.714rem;
+        }
+    }
 }

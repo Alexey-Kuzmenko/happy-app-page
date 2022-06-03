@@ -61,19 +61,6 @@
             padding: 25px 10px 0px 10px;
         }
 
-        .content-block__title {
-            font-size: 2.857rem;
-            text-align: center;
-        }
-
-        .content-block__text {
-            text-align: center;
-        }
-
-        .content-block__image {
-            margin-top: 20px;
-        }
-
         .main__content-block {
             align-items: center
         }
@@ -84,4 +71,9 @@
         }
     }
 
+    @include media (max-width, 425px) {
+        &__container {
+            padding: 85px 10px 0 10px;
+        }
+    }
 }
