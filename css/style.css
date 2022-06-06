@@ -51,6 +51,7 @@ select {
   font: inherit;
 }
 
+/* html and body */
 html {
   font-size: 14px;
   /* 1rem = 14px */
