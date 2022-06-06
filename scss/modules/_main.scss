@@ -2,6 +2,10 @@
 
     &__color-wrapper_dark {
         background-color: $graphite-color;
+
+        &:last-child {
+            padding-bottom: 95px;
+        }
     }
 
     &__color-wrapper_red {
