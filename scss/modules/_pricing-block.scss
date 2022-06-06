@@ -1,0 +1,116 @@
+.pricing-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        max-width: 600px;
+        padding: 41px;
+    }
+
+    &__caption {
+        @extend %caption;
+    }
+
+    &__title {
+        @extend %title;
+    }
+
+    &__sub-text {
+        @extend %sub-text;
+    }
+
+    &__cards {
+        max-width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card {
+        width: 378px;
+        height: 338px;
+        padding: 50px 40px;
+
+        background-color: $dark-white;
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(2) {
+            margin: 0 16px;
+        }
+
+        &-name {
+            font-size: 1.214rem;
+            line-height: 1.714rem;
+            text-align: center;
+            // margin-bottom: 11px;
+        }
+
+        &-price {
+            font-size: 7.5rem;
+            line-height: 8.857rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        &-caption {
+            @include font-style ($graphite-color, 1.125rem);
+            letter-spacing: 0.143rem;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+
+    // * colors modifiers
+    &__card-name_blue,
+    &__card-price_blue {
+        color: $blue-color;
+    }
+
+    &__card-name_red,
+    &__card-price_red {
+        color: $red-color;
+    }
+
+    &__card-name_orange,
+    &__card-price_orange {
+        color: $orange-color;
+    }
+
+    &__button {
+        &_blue {
+            background-color: $blue-color;
+            outline: 1px solid $blue-color;
+
+            &:hover {
+                color: $blue-color;
+            }
+        }
+
+        &_red {
+            background-color: $red-color;
+            outline: 1px solid $red-color;
+
+            &:hover {
+                color: $red-color;
+            }
+        }
+
+        &_orange {
+            background-color: $orange-color;
+            outline: 1px solid $orange-color;
+
+            &:hover {
+                color: $orange-color;
+            }
+        }
+    }
+}
