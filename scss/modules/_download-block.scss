@@ -1,0 +1,43 @@
+.download-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        max-width: 600px;
+        margin-bottom: 26px
+    }
+
+    &__caption {
+        @extend %caption;
+
+    }
+
+    &__title {
+        @extend %title;
+        margin-bottom: 14px;
+    }
+
+    &__sub-text {
+        @extend %sub-text;
+    }
+
+    &__caption,
+    &__title,
+    &__sub-text {
+        text-align: center;
+    }
+
+    // ! media query
+    @include media (max-width, 375px) {
+        &__title {
+            font-size: 1.786rem;
+        }
+
+        &__sub-text {
+            font-size: 1rem;
+        }
+    }
+
+}
