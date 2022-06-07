@@ -455,7 +455,7 @@ body {
 
 @media (max-width: 425px) {
   .main__container {
-    padding: 85px 10px 0 10px;
+    padding: 85px 10px 85px 10px;
   }
 }
 
@@ -1004,9 +1004,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .pricing-block__card {
-    margin: 16px 0;
   }
   .pricing-block__card:nth-child(2) {
     margin: 16px 0;
