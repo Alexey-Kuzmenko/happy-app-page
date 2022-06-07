@@ -1,0 +1,36 @@
+.footer {
+    background-color: $dark-white;
+
+    &__container {
+        padding: 100px 16px 100px 16px;
+    }
+
+    &__content {
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo,
+    &__icons {
+        margin-bottom: 26px;
+    }
+
+    &__icons {
+        width: 112px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__rights {
+        @include font-style ($light-grey, 1.714rem, 1.143rem);
+        text-align: center;
+
+        &>span {
+            color: $grey-color;
+        }
+    }
+}
