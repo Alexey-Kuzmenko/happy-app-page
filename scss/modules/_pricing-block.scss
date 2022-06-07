@@ -15,6 +15,7 @@
 
     &__title {
         @extend %title;
+        margin-bottom: 14px
     }
 
     &__sub-text {
@@ -138,6 +139,14 @@
     }
 
     @include media (max-width, 375px) {
+        &__title {
+            font-size: 1.786rem;
+        }
+
+        &__sub-text {
+            font-size: 1rem;
+        }
+
         &__card {
             width: 295px;
         }
