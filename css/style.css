@@ -987,4 +987,37 @@ body {
 .pricing-block__button_orange:hover {
   color: #FF9209;
 }
+
+@media (max-width: 1440px) {
+  .pricing-block__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pricing-block__card {
+    margin: 16px 0;
+  }
+  .pricing-block__card:nth-child(2) {
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .pricing-block__card {
+    width: 325px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pricing-block__card {
+    width: 295px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
