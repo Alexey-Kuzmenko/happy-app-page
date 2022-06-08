@@ -76,6 +76,7 @@ select {
 
 /* html and body */
 html {
+  scroll-behavior: smooth;
   font-size: 14px;
   /* 1rem = 14px */
 }
