@@ -25,6 +25,15 @@
         } else if (target.classList.contains('header__menu-icon')) {
             target.classList.toggle('header__menu-icon_active')
             menu.classList.toggle('menu_active')
+            setBodyScroll(target)
+        }
+    }
+
+    function setBodyScroll(menuIcon) {
+        if (menuIcon.classList.contains('header__menu-icon_active')) {
+            body.dataset.bodyScroll = false
+        } else {
+            body.dataset.bodyScroll = true
         }
     }
 

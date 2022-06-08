@@ -68,6 +68,11 @@
         &__title_small {
             font-size: 1.786rem;
         }
+
+        // ! testing
+        &__image>img {
+            max-width: 100%;
+        }
     }
 
 }
