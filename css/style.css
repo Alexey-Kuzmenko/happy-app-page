@@ -351,6 +351,9 @@ body[data-body-scroll="false"] {
   .header .menu__body {
     overflow-y: auto;
   }
+  .header .nav__button {
+    display: none;
+  }
 }
 
 /* * button */
