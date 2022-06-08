@@ -86,6 +86,10 @@ body {
   font-weight: 400;
 }
 
+body[data-body-scroll="false"] {
+  overflow-y: hidden;
+}
+
 /* ! page and container */
 .page {
   width: 100%;
@@ -586,6 +590,9 @@ body {
   }
   .content-block__title_small {
     font-size: 1.786rem;
+  }
+  .content-block__image > img {
+    max-width: 100%;
   }
 }
 
