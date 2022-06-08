@@ -101,6 +101,48 @@ body {
   margin: 0 auto;
 }
 
+.to-top-btn {
+  width: 60px;
+  height: 60px;
+  z-index: 10;
+  position: fixed;
+  bottom: 20px;
+  left: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E5E5E5;
+  visibility: hidden;
+  border-radius: 50%;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.to-top-btn:hover {
+  opacity: 1;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.to-top-btn_active {
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .to-top-btn {
+    width: 50px;
+    height: 50px;
+    left: 80%;
+  }
+}
+
 /* * header */
 .header {
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);

@@ -1,0 +1,37 @@
+.to-top-btn {
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+
+    position: fixed;
+    bottom: 20px;
+    left: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $mid-white;
+    visibility: hidden;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 1;
+        transition: all 0.1s ease;
+    }
+
+    &_active {
+        visibility: visible;
+    }
+
+    // ! media query
+    @include media (max-width, 768px) {
+        & {
+            width: 50px;
+            height: 50px;
+            left: 80%;
+        }
+    }
+}
