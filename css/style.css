@@ -140,6 +140,12 @@ body[data-body-scroll="false"] {
   visibility: visible;
 }
 
+@media (min-width: 2560px) {
+  .to-top-btn {
+    bottom: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   .to-top-btn {
     width: 50px;
