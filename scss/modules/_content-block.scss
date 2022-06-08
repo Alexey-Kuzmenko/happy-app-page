@@ -31,6 +31,10 @@
         max-width: 403px;
     }
 
+    &__image>img {
+        max-width: 376px;
+    }
+
     @include media (max-width, 1000px) {
         &__title {
             font-size: 2.857rem;
