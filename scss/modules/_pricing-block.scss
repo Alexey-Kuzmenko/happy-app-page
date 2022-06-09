@@ -89,28 +89,16 @@
         &_blue {
             background-color: $blue-color;
             outline: 1px solid $blue-color;
-
-            &:hover {
-                color: $blue-color;
-            }
         }
 
         &_red {
             background-color: $red-color;
             outline: 1px solid $red-color;
-
-            &:hover {
-                color: $red-color;
-            }
         }
 
         &_orange {
             background-color: $orange-color;
             outline: 1px solid $orange-color;
-
-            &:hover {
-                color: $orange-color;
-            }
         }
     }
 
@@ -165,6 +153,26 @@
                         -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
                         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
                     }
+                }
+            }
+        }
+
+        &__button {
+            &_blue {
+                &:hover {
+                    color: $blue-color;
+                }
+            }
+
+            &_red {
+                &:hover {
+                    color: $red-color;
+                }
+            }
+
+            &_orange {
+                &:hover {
+                    color: $orange-color;
                 }
             }
         }

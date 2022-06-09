@@ -1149,26 +1149,14 @@ body[data-body-scroll="false"] {
   outline: 1px solid #0278ED;
 }
 
-.pricing-block__button_blue:hover {
-  color: #0278ED;
-}
-
 .pricing-block__button_red {
   background-color: #FF5437;
   outline: 1px solid #FF5437;
 }
 
-.pricing-block__button_red:hover {
-  color: #FF5437;
-}
-
 .pricing-block__button_orange {
   background-color: #FF9209;
   outline: 1px solid #FF9209;
-}
-
-.pricing-block__button_orange:hover {
-  color: #FF9209;
 }
 
 @media (max-width: 1440px) {
@@ -1221,6 +1209,15 @@ body[data-body-scroll="false"] {
       -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
       box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     }
+  }
+  .pricing-block__button_blue:hover {
+    color: #0278ED;
+  }
+  .pricing-block__button_red:hover {
+    color: #FF5437;
+  }
+  .pricing-block__button_orange:hover {
+    color: #FF9209;
   }
 }
 
