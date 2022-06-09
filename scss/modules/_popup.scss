@@ -1,0 +1,113 @@
+/* * popup window */
+.popup {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 6;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+
+    /* transition */
+    transition: all 0.3s ease 0s;
+
+    &_open {
+        opacity: 1;
+        visibility: visible;
+
+        /* transition */
+        transition: all 0.3s ease 0s;
+    }
+
+    &__body {
+        min-height: 100%;
+        padding: 30px 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        position: relative;
+
+        max-width: 800px;
+        padding: 40px 20px;
+        height: auto;
+
+        background-color: $white-color;
+        border-radius: 20px;
+    }
+
+    &__text {
+        @extend %sub-text;
+        text-align: start;
+    }
+
+    &__close-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+
+        cursor: pointer;
+    }
+
+    &__buttons {
+        margin-top: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+
+    &__button {
+        border: none;
+        max-width: max-content;
+
+        &_blue {
+            background-color: $blue-color;
+            outline: 1px solid $blue-color;
+        }
+
+        &_red {
+            background-color: $red-color;
+            outline: 1px solid $red-color;
+        }
+
+    }
+
+    // ! media query 
+    @include media (min-width, 1000px) {
+        &__button {
+            &_blue {
+                &:hover {
+                    color: $blue-color;
+                }
+            }
+
+            &_red {
+                &:hover {
+                    color: $red-color;
+                }
+            }
+        }
+    }
+
+    @include media (max-width, 768px) {
+        &__buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__button {
+            &:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -12,13 +12,14 @@
 /* ! page and container */
 @import 'modules/page';
 @import 'modules/container';
+
+/* * buttons and popup window  */
+@import 'modules/buttons';
 @import 'modules/to-top-btn';
+@import 'modules/popup';
 
 /* * header */
 @import 'modules/header';
-
-/* * button */
-@import 'modules/buttons';
 
 /* * main */
 @import 'modules/main';
