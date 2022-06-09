@@ -13,6 +13,7 @@
     window.addEventListener('scroll', function () { userScroll() }, false)
     toTopBtn.addEventListener('click', onToTopBtnClickHandler, false)
     pricingBlock.addEventListener('click', pricingBlockHandler, false)
+    window.setTimeout(renderPopupWindow, 1000)
 
     // * header handler
     function onClickHandler({ target }) {
@@ -65,11 +66,10 @@
         mainText: 'This website uses cookies in order to offer you the most relevant information. Please accept cookies for optimal performance.',
         blueButtonText: 'Yes,accept cookies',
         redButtonText: 'Ignore, and close',
-        alertButtontText: 'Ok'
     }
 
     // !popup template
-    function popupTamplate({ mainText, blueButtonText, redButtonText, alertButtontText }, type) {
+    function popupTamplate({ mainText, blueButtonText, redButtonText }) {
         let popupContentElements = []
 
         // perent element
@@ -102,29 +102,22 @@
         popupButtons.classList.add('popup__buttons')
         popupContentElements.push(popupButtons)
 
-        if (type === 'cookies') {
-            const popupBlueButton = document.createElement('button')
-            popupBlueButton.classList.add('button')
-            popupBlueButton.classList.add('popup__button')
-            popupBlueButton.classList.add('popup__button_blue')
-            popupBlueButton.textContent = blueButtonText
+        const popupBlueButton = document.createElement('button')
+        popupBlueButton.classList.add('button')
+        popupBlueButton.classList.add('popup__button')
+        popupBlueButton.classList.add('popup__button_blue')
+        popupBlueButton.textContent = blueButtonText
 
-            const popupRedButton = document.createElement('button')
-            popupRedButton.classList.add('button')
-            popupRedButton.classList.add('popup__button')
-            popupRedButton.classList.add('popup__button_red')
-            popupRedButton.textContent = redButtonText
+        const popupRedButton = document.createElement('button')
+        popupRedButton.classList.add('button')
+        popupRedButton.classList.add('popup__button')
+        popupRedButton.classList.add('popup__button_red')
+        popupRedButton.textContent = redButtonText
 
-            popupButtons.appendChild(popupBlueButton)
-            popupButtons.appendChild(popupRedButton)
-        }
-        else {
-            const popupBlueButton = document.createElement('button')
-            popupBlueButton.classList.add('button popup__button popup__button_blue')
-            popupBlueButton.textContent = alertButtontText
+        popupButtons.appendChild(popupBlueButton)
+        popupButtons.appendChild(popupRedButton)
 
-            popupButtons.appendChild(popupBlueButton)
-        }
+
 
         popupContentElements.forEach(node => {
             popupContent.appendChild(node)
@@ -136,14 +129,14 @@
         return popup
     }
 
-    function renderPopupWindow(node = popupTamplate(popupContent, 'cookies')) {
+    // * added popup window on page
+    function renderPopupWindow(node = popupTamplate(popupContent)) {
         const page = document.querySelector('.page')
         page.insertAdjacentElement('afterend', node)
         node.addEventListener('click', onPopupClickHandler, false)
+        toTopBtn.classList.remove('to-top-btn_active')
         body.dataset.bodyScroll = false
     }
-
-    window.setTimeout(renderPopupWindow, 1000)
 
     // * popup window handler
     function onPopupClickHandler({ target }) {
